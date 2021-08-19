@@ -1,6 +1,16 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import store from './store'
 
-createApp(App).use(store).use(router).mount('#app')
+import installElementPlus from './plugins/element'
+import './assets/fonts/iconfont.css'
+
+
+
+
+
+const app = createApp(App)
+installElementPlus(app)
+app.use(router)
+.mount('#app')
+
